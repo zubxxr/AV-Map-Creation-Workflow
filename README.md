@@ -44,3 +44,6 @@ Import Point Cloud into Vector Map Builder (https://tools.tier4.jp/vector_map_bu
 - Import the .pcd file into the vector map builder.
 - Specify the MGRS of the map.
 - Create lanelets and other required elements.
+
+<br> 
+*Note: README.md is a work in progress. More detailed documentation will be added soon.*
