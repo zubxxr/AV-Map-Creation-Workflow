@@ -2,6 +2,8 @@
 
 This document outlines the steps involved in converting an OpenStreetMap (OSM) file into a Unity 3D working model compatible with AWSIM and Autoware.
 
+![image](https://github.com/zubxxr/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/assets/91695367/585dfd7b-bf87-44f8-8e66-9f9f6d313d34)
+
 ## Steps:
 
 1. **Download OSM File**: [Demonstration](assets/1-OSM-File.mkv)
