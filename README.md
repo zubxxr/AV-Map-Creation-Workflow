@@ -38,7 +38,7 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
 
 5. **Create Lanelets**: [Demonstration](assets/5-MGRS-and-Lanelet-Creation.mkv)
 
-    - Import the .pcd file into the [Vector Map Builder](https://tools.tier4.jp/vector_map_builder_ll2/).
+    - Import the .pcd file into [Vector Map Builder](https://tools.tier4.jp/vector_map_builder_ll2/).
     - Specify the MGRS of the map.
     - Create lanelets and other required elements.
 
