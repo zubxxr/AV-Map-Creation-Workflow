@@ -6,23 +6,23 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
 
 ## Steps:
 
-1. **Download OSM File**: [Demonstration](assets/1-OSM-File.mkv)
+1. **Download OSM File**: [Demonstration](https://youtu.be/XRM1CWqoilY?si=k4Z60OI0aAYvFbIY)
  
     - Obtain the desired OSM file from OpenStreetMap. 
 
-2. **Convert OSM to OBJ**: [Demonstration](assets/2-Mesh-Extraction.mkv)
+2. **Convert OSM to OBJ**: [Demonstration](https://youtu.be/EcEMcxI5B8I?si=jfZtykDK3_kFkCEJ)
 
     - Utilize OSM2World to convert the OSM file into an OBJ format.
     - Export the OBJ folder containing part_obj_textures, materials.mtl, and part0000.obj.
 
-3. **Import OBJ mesh file into CloudCompare and Generate PCD**: [Demonstration](assets/3-Mesh-To-PCD.mkv)
+3. **Import OBJ mesh file into CloudCompare and Generate PCD**: [Demonstration](https://youtu.be/x9EbpukDEtI?si=wLUtBe0_kmvFjB0e)
 
     - Use CloudCompare to import the OBJ mesh file along with its associated files.
     - Ensure all files are stored in the same directory.
     - In Cloud Compare, select the mesh in the DB Tree, then Edit > Mesh > Sample Points and click OK.
     - Save the sampled file as a .pcd file.
 
-4. **Adjust View Angle & Convert Format**: [Demonstration](assets/4-PCD-Processing.mkv)
+4. **Adjust View Angle & Convert Format**: [Demonstration](https://youtu.be/U-Kz_an1IyM?si=cCpnjo5GM6epVi0N)
 
     - If there are view angle issues, apply the following commands for a top-down view:
 
@@ -38,13 +38,13 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
 
     
 
-5. **Create Lanelets**: [Demonstration](assets/5-MGRS-and-Lanelet-Creation.mkv)
+5. **Create Lanelets**: [Demonstration](https://youtu.be/L9ijGCOvHXw?si=YF_KEIsLrELkaID9)
 
     - Import the .pcd file into [Vector Map Builder](https://tools.tier4.jp/vector_map_builder_ll2/).
     - Specify the MGRS of the map.
     - Create lanelets and other required elements.
 
-6. **Import Files to Autoware**: [Demonstration](assets/6-Importing-Files-Into-Autoware.mkv)
+6. **Import Files to Autoware**: [Demonstration](https://youtu.be/J-14XYo3Ww4?si=exdyb04r5s6vO_Up)
    
 
 <br> 
