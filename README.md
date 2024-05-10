@@ -30,7 +30,7 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
       pcl_transform_point_cloud original_point_cloud_input.pcd preliminary_rotation_result.pcd -axisangle 1,0,0,-1.5708
       pcl_transform_point_cloud preliminary_rotation_result.pcd transformed_top_down_view.pcd -axisangle 1,0,0,3.1416
       ```
-    - Uncompress the .pcd file using:
+    - Convert the .pcd file from ASCII to binary using:
       
       ```bash
       pcl_convert_pcd_ascii_binary transformed_top_down_view.pcd final_output.pcd 1
