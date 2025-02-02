@@ -64,7 +64,7 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
    ![image](https://github.com/user-attachments/assets/992aa2fc-2c0c-4535-9505-cfe438145477)
 
 
-   - Click on the new file in the DB Tree, and click File > Save, and save it in your preferred directory. This will be saved as a .pcd (Point Cloud Data) file.
+   - Click on the new file in the DB Tree, and click File > Save, and save it in your preferred directory. Choose any name. This will be saved as a .pcd (Point Cloud Data) file.
    ![image](https://github.com/user-attachments/assets/aa6542a6-b798-40b2-8b0e-b06a5215e325)
 
 
@@ -73,17 +73,45 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
 ### 4. **Adjust View Angle & Convert Format**: [Demonstration](https://drive.google.com/file/d/1atm-YRY9qiV59AITQKHuUumpNAuUOszs/view?usp=drive_link)
 
    - **Tools Required**: [PCL](https://pointclouds.org/)
-   - If there are view angle issues, apply the following commands for a top-down view:
+   - Some extra processing will be needed to fix the orientation of the Point Cloud before it can be loaded into Autoware.
+   - To understand why, run the following command in a terminal in the same directory as the Point Cloud file.
 
       ```bash
-      pcl_transform_point_cloud original_point_cloud_input.pcd preliminary_rotation_result.pcd -axisangle 1,0,0,-1.5708
-      pcl_transform_point_cloud preliminary_rotation_result.pcd transformed_top_down_view.pcd -axisangle 1,0,0,3.1416
+      pcl_viewer <your_pointcloud>.pcd
       ```
+   - Zoom in a little, and you can see how its a front facing view. We will have to fix it so that once we run **pcl_viewer** again, it will show us a top-down view.
+   ![image](https://github.com/user-attachments/assets/71e1f903-01fe-41c4-9f64-dfbe2535bad5)
+
+      
+   - Exit the pcl_viewer, and run the following in the terminal for a top-down view:
+
+      ```bash
+      pcl_transform_point_cloud <your_pointcloud_file>.pcd first_transformation.pcd -axisangle 1,0,0,-1.5708
+      pcl_transform_point_cloud first_transformation.pcd transformed_top_down_view.pcd -axisangle 1,0,0,3.1416
+      ```
+      ![image](https://github.com/user-attachments/assets/d11f5895-4909-479a-b7f1-6a48baf21394)
+      ![image](https://github.com/user-attachments/assets/95434885-0804-423d-bcd9-07ef069bbdea)
+
+
    - Convert the .pcd file from ASCII to binary using:
       
       ```bash
-      pcl_convert_pcd_ascii_binary transformed_top_down_view.pcd final_output.pcd 1
+      pcl_convert_pcd_ascii_binary transformed_top_down_view.pcd <your_final_pointcloud>.pcd 1
       ```
+      ![image](https://github.com/user-attachments/assets/a5b5bb8c-21a6-4cbe-b5ea-3430095857c9)
+
+   - View the final Point Cloud. Zoom in a bit, and you will see its a top-down view. 
+     
+      ```bash
+      pcl_viewer <your_final_pointcloud>.pcd
+      ```
+      ![image](https://github.com/user-attachments/assets/9e6e3dcc-6f4f-4119-abe7-adb5b0d7e939)
+
+   - With this, the Point Cloud processing is done.
+
+      
+      
+
 
 ---
 
