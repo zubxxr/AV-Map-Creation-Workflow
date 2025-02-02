@@ -1,28 +1,32 @@
 # OSM to Unity 3D Model Conversion Workflow for AWSIM and Autoware
 
-This document outlines the steps involved in converting an OpenStreetMap (OSM) file into a Unity 3D model compatible with AWSIM and Autoware. Demonstrations have been provided below for each part. This [playlist](https://youtube.com/playlist?list=PLeS09kz3NmdCWKZ0mzhWLT95PZ_UkcSlW&si=Yb3to5FhjK-JcwSk) also contains all the demonstrations.
+This document outlines the steps involved in converting an OpenStreetMap (OSM) file into a Unity 3D model compatible with AWSIM and Autoware. Demonstrations have been provided below for each part. This [Google Drive](https://drive.google.com/drive/folders/1Mtkr13VCS5KdGLns7JRVTOxwJmy0Xnit?usp=drive_link) also contains all the demonstrations.
 
 <img src="https://github.com/zubxxr/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/blob/main/assets/OSM-Mesh-Workflow.png" alt="image" style="width: 700px;">
 
 ## Steps:
 
-1. **Download OSM File**: [Demonstration](https://youtu.be/XRM1CWqoilY?si=k4Z60OI0aAYvFbIY)
+1. **Download OSM File**: [Demonstration](https://drive.google.com/file/d/1siUoWQ66YDEZnNxpCEGZUtRvuZyRF7Ho/view?usp=drive_link)
  
-    - Obtain the desired OSM file from OpenStreetMap. 
+    - Select the location you want to create a map for.
+    ![image](https://github.com/user-attachments/assets/a0fe3473-11da-4b74-9fa5-31b8ce43e652)
 
-2. **Convert OSM to OBJ**: [Demonstration](https://youtu.be/EcEMcxI5B8I?si=jfZtykDK3_kFkCEJ)
+    - Click Export to download a **map.osm** file.
+
+
+2. **Convert OSM to OBJ**: [Demonstration](https://drive.google.com/file/d/1dyTxqLgO2tPrpjYVindg-_BhmtaVfODf/view?usp=drive_link)
 
     - Utilize OSM2World to convert the OSM file into an OBJ format.
     - Export the OBJ folder containing part_obj_textures, materials.mtl, and part0000.obj.
 
-3. **Import OBJ mesh file into CloudCompare and Generate PCD**: [Demonstration](https://youtu.be/x9EbpukDEtI?si=wLUtBe0_kmvFjB0e)
+3. **Import OBJ mesh file into CloudCompare and Generate PCD**: [Demonstration](https://drive.google.com/file/d/1cAZZyMCDsIj3vTjb7KjpvkoFsfH8ReB2/view?usp=drive_link)
 
     - Use CloudCompare to import the OBJ mesh file along with its associated files.
     - Ensure all files are stored in the same directory.
     - In Cloud Compare, select the mesh in the DB Tree, then Edit > Mesh > Sample Points and click OK.
     - Save the sampled file as a .pcd file.
 
-4. **Adjust View Angle & Convert Format**: [Demonstration](https://youtu.be/U-Kz_an1IyM?si=cCpnjo5GM6epVi0N)
+4. **Adjust View Angle & Convert Format**: [Demonstration](https://drive.google.com/file/d/1atm-YRY9qiV59AITQKHuUumpNAuUOszs/view?usp=drive_link)
 
     - If there are view angle issues, apply the following commands for a top-down view:
 
@@ -38,13 +42,13 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
 
     
 
-5. **Create Lanelets**: [Demonstration](https://youtu.be/L9ijGCOvHXw?si=YF_KEIsLrELkaID9)
+5. **Create Lanelets**: [Demonstration](https://drive.google.com/file/d/1GsgT-V2fWnFuPw8rWdohsYPsOSAnr716/view?usp=drive_link)
 
     - Import the .pcd file into [Vector Map Builder](https://tools.tier4.jp/vector_map_builder_ll2/).
     - Specify the MGRS of the map.
     - Create lanelets and other required elements.
 
-6. **Import Files to Autoware**: [Demonstration](https://youtu.be/J-14XYo3Ww4?si=exdyb04r5s6vO_Up)
+6. **Import Files to Autoware**: [Demonstration](https://drive.google.com/file/d/1JRt64q4x_NL__mK30LJ7Vgzp1ZBU6C9e/view?usp=drive_link)
    
 
 <br> 
