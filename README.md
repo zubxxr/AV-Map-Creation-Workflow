@@ -60,7 +60,11 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
    - You will see a new file created, which is the Point Cloud file.
    ![image](https://github.com/user-attachments/assets/b1f8e7e9-b560-4a2f-90aa-ccf2d907caca)
 
-   - Click on the new file in the DB Tree, and click File > Save, and save it in your preferred directory.
+   - To view the Point Cloud, uncheck everything except the sampled file.
+   ![image](https://github.com/user-attachments/assets/992aa2fc-2c0c-4535-9505-cfe438145477)
+
+
+   - Click on the new file in the DB Tree, and click File > Save, and save it in your preferred directory. This will be saved as a .pcd (Point Cloud Data) file.
    ![image](https://github.com/user-attachments/assets/aa6542a6-b798-40b2-8b0e-b06a5215e325)
 
 
