@@ -27,8 +27,19 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
 ### 2. **Convert OSM to OBJ**: [Demonstration](https://drive.google.com/file/d/1dyTxqLgO2tPrpjYVindg-_BhmtaVfODf/view?usp=drive_link)
 
    - **Tools Required**: [OSM2World](http://osm2world.org/)
-   - Utilize OSM2World to convert the OSM file into an OBJ format.
-   - Export the OBJ folder containing part_obj_textures, materials.mtl, and part0000.obj.
+   - Click File > Open OSM file and click on the newly downloaded OSM file from Step 1 and click OK.
+   ![image](https://github.com/user-attachments/assets/51133bf5-49d2-46b7-812a-cd6e9cb93a2f)
+   - You will see a 3D map automatically created from the OSM file.
+   ![image](https://github.com/user-attachments/assets/6f8628cb-83fa-4875-9867-872d613dd2ce)
+
+   - Click File > Export OBJ directory and select a directory to save the files in. Then click OK.
+   - Leave the Graphics Primitives per file at 10000 and click OK.
+   ![image](https://github.com/user-attachments/assets/ee527217-88f6-4522-bf0e-e6aa5575329e)
+
+   - You will then see 2 files and one folder, containing all the data for the 3D model.
+   - The obj file is the 3D mesh file, the mtl file is the materials data file, and the textures folder contains all the pictures required to describe the environment.
+   ![image](https://github.com/user-attachments/assets/f917622b-a596-4774-8546-41e49cc4b4e6)
+
 
 ---
 
