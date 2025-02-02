@@ -1,4 +1,4 @@
-# OSM to Unity 3D Model Conversion Workflow for AWSIM and Autoware
+![image](https://github.com/user-attachments/assets/ff5085fc-7f8b-4462-8055-ceb0da1d74a0)# OSM to Unity 3D Model Conversion Workflow for AWSIM and Autoware
 
 This document outlines the steps involved in converting an OpenStreetMap (OSM) file into a Unity 3D model compatible with AWSIM and Autoware. Demonstrations have been provided below for each part. This [Google Drive](https://drive.google.com/drive/folders/1Mtkr13VCS5KdGLns7JRVTOxwJmy0Xnit?usp=drive_link) also contains all the demonstrations.
 
@@ -74,7 +74,7 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
 
    - **Tools Required**: [PCL](https://pointclouds.org/)
    - Some extra processing will be needed to fix the orientation of the Point Cloud before it can be loaded into Autoware.
-   - To understand why, run the following command in a terminal in the same directory as the Point Cloud file.
+   - To understand why, run the following command in a terminal in the same directory as the Point Cloud file created from Step 3.
 
       ```bash
       pcl_viewer <your_pointcloud>.pcd
@@ -107,10 +107,7 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
       ```
       ![image](https://github.com/user-attachments/assets/9e6e3dcc-6f4f-4119-abe7-adb5b0d7e939)
 
-   - With this, the Point Cloud processing is done.
-
-      
-      
+   - Finally, rename the file to pointcloud_map.pcd. This is due to naming conventions required for Autoware, With this, the Point Cloud processing is done.
 
 
 ---
@@ -118,10 +115,28 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
 ### 5. **Create Lanelets**: [Demonstration](https://drive.google.com/file/d/1GsgT-V2fWnFuPw8rWdohsYPsOSAnr716/view?usp=drive_link)
 
    - **Tools Required**: [Vector Map Builder](https://tools.tier4.jp/vector_map_builder_ll2/)
-   - Import the .pcd file into Vector Map Builder.
-   - Specify the MGRS of the map.
-   - Create lanelets and other required elements.
+   - To use this, a point cloud must first be imported, and then a lanelet2 map can be created on top it.
+   - Import the .pcd file into Vector Map Builder using File > Import PCD > Browse, click the pointcloud file created from Step 4 and finally click Import.
+   - You will see the point cloud in the window.
+   ![image](https://github.com/user-attachments/assets/6bf54634-dc88-4df5-a257-57de2560cdce)
 
+   - Next, click Create > Create Lanelet2Maps > Change Map Projector Info and change the projector type to MGRS.
+   ![image](https://github.com/user-attachments/assets/3117a53d-9659-477b-b605-fef19873988c)
+
+   - To set the lanelet2 map in the correct location, the Grid zone and 100,000-meter square values are needed.
+   - To do so, follow the following steps:
+
+   - Use this website https://www.gps-coordinates.net/ to get the latitude and longitude of your location you extracted in Step 1.
+   ![image](https://github.com/user-attachments/assets/cbd118c3-98af-4cff-b94b-5a55d135431d)
+
+   - Next, plug in the latitude and longitude into this website https://legallandconverter.com/p50.html to get the MGRS.
+   ![image](https://github.com/user-attachments/assets/1b0d9bfb-8625-4a34-be4d-1095b2fdad51)
+   ![image](https://github.com/user-attachments/assets/af45ab5c-ff87-42d4-ab17-ce8668410440)
+
+   - Based on the image above, the Grid zone is **17T** and the 100,000-meter square is **PJ**. Set those values in VectorMapBuilder and click **Update Map Projector Info**, and click OK on the popup. Finally, click **Create**.
+   ![image](https://github.com/user-attachments/assets/d78f7a3c-3d72-494e-8f95-dbeb9dc565a0)
+
+   - Lastly, create lanelets and other required elements. To do so, either follow the demonstration, search it up on YouTube, or follow the manual https://docs.web.auto/en/user-manuals/vector-map-builder/how-to-use
 ---
 
 ### 6. **Import Files to Autoware**: [Demonstration](https://drive.google.com/file/d/1JRt64q4x_NL__mK30LJ7Vgzp1ZBU6C9e/view?usp=drive_link)
