@@ -46,10 +46,23 @@ This document outlines the steps involved in converting an OpenStreetMap (OSM) f
 ### 3. **Import OBJ mesh file into CloudCompare and Generate PCD**: [Demonstration](https://drive.google.com/file/d/1cAZZyMCDsIj3vTjb7KjpvkoFsfH8ReB2/view?usp=drive_link)
 
    - **Tools Required**: [CloudCompare](https://www.danielgm.net/cc/)
-   - Use CloudCompare to import the OBJ mesh file along with its associated files.
-   - Ensure all files are stored in the same directory.
-   - In CloudCompare, select the mesh in the DB Tree, then Edit > Mesh > Sample Points and click OK.
-   - Save the sampled file as a .pcd file.
+   - Use CloudCompare to import the OBJ mesh file. Ensure all files are stored in the same directory.
+   - Click File > Open, and make sure the file type is set to **OBJ mesh** at the bottom right of the **Open file(s)** window, and select the OBJ file downloaded from Step 2.
+   ![image](https://github.com/user-attachments/assets/86e7b04d-bef8-4950-88f6-4cd40a2002ba)
+
+   - The 3D model will now be loaded into CloudCompare. You may have to zoom in and fix the orientation on the window to view the 3D model.
+   ![image](https://github.com/user-attachments/assets/ec41a90b-a03b-4569-acee-79c89504eaba)
+
+   - Next, to generate a Point Cloud, click on the mesh in the DB Tree, then Edit > Mesh > Sample Points, leave the default values, and click OK.
+   ![image](https://github.com/user-attachments/assets/1481abca-b19a-41b6-8966-c55e4f86f501)
+   ![image](https://github.com/user-attachments/assets/a6e800a6-a4f0-4fb9-977e-daf3193c8382)
+
+   - You will see a new file created, which is the Point Cloud file.
+   ![image](https://github.com/user-attachments/assets/b1f8e7e9-b560-4a2f-90aa-ccf2d907caca)
+
+   - Click on the new file in the DB Tree, and click File > Save, and save it in your preferred directory.
+   ![image](https://github.com/user-attachments/assets/aa6542a6-b798-40b2-8b0e-b06a5215e325)
+
 
 ---
 
