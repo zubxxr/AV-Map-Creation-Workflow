@@ -91,8 +91,10 @@ This repository outlines the steps involved in converting an OpenStreetMap (OSM)
    - Convert the .pcd file from ASCII to binary using:
       
       ```bash
-      pcl_convert_pcd_ascii_binary transformed_top_down_view.pcd <your_final_pointcloud>.pcd 1
+      pcl_convert_pcd_ascii_binary transformed_top_down_view.pcd pointcloud_map.pcd 1
       ```
+      Keep the output name as **pointcloud_map.pcd**. This is due to naming conventions required for Autoware, With this, the Point Cloud processing is done.
+
       ![image](https://github.com/user-attachments/assets/a5b5bb8c-21a6-4cbe-b5ea-3430095857c9)
 
    - View the final Point Cloud. Zoom in a bit, and you will see its a top-down view. 
@@ -102,7 +104,6 @@ This repository outlines the steps involved in converting an OpenStreetMap (OSM)
       ```
       ![image](https://github.com/user-attachments/assets/9e6e3dcc-6f4f-4119-abe7-adb5b0d7e939)
 
-   - Finally, rename the file to **pointcloud_map.pcd**. This is due to naming conventions required for Autoware, With this, the Point Cloud processing is done.
 ---
 
 ### 5. **Create Lanelets**: [Demonstration](https://drive.google.com/file/d/1GsgT-V2fWnFuPw8rWdohsYPsOSAnr716/view?usp=drive_link)
