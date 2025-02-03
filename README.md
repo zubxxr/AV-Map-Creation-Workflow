@@ -151,10 +151,3 @@ This repository outlines the steps involved in converting an OpenStreetMap (OSM)
 
 <br> 
 *Note: README.md is a work in progress. More detailed documentation will be added soon.*
-
-
-- ./osm2world.sh --input map.osm -o output/output.obj
-- pcl_mesh_sampling output.obj output.pcd -leaf_size 0.5 -no_vis_result -n_samples 1000000
-
-
-
