@@ -32,14 +32,12 @@ This repository outlines the steps involved in converting an OpenStreetMap (OSM)
    - You will see a 3D map automatically created from the OSM file.
    ![image](https://github.com/user-attachments/assets/6f8628cb-83fa-4875-9867-872d613dd2ce)
 
-   - Click **File > Export OBJ** directory and select a directory to save the files in. Then click **OK**.
-   - Leave the Graphics Primitives per file at 10000 and click **OK**.
-   ![image](https://github.com/user-attachments/assets/ee527217-88f6-4522-bf0e-e6aa5575329e)
 
    - Click **File > Export OBJ** directory and select a directory to save the files in. Then click **OK**.  
-   - Leave the Graphics Primitives per file at 10000 and click **OK**.  
-   <br>
-   ![image](https://github.com/user-attachments/assets/ee527217-88f6-4522-bf0e-e6aa5575329e)
+   - Leave the **Graphics Primitives per file** at **10000** and click **OK**.  
+       <p>
+         <img src="https://github.com/user-attachments/assets/ee527217-88f6-4522-bf0e-e6aa5575329e" alt="Export OBJ settings">
+       </p>
 
 
 ---
@@ -54,12 +52,12 @@ This repository outlines the steps involved in converting an OpenStreetMap (OSM)
    - The 3D model will now be loaded into CloudCompare. You may have to zoom in and fix the orientation on the window to view the 3D model.
    ![image](https://github.com/user-attachments/assets/ec41a90b-a03b-4569-acee-79c89504eaba)
 
-   - Next, to generate a Point Cloud, click on the mesh in the DB Tree, then **Edit > Mesh > Sample Points**, leave the default values, and click **OK**.
-   ![image](https://github.com/user-attachments/assets/1481abca-b19a-41b6-8966-c55e4f86f501)
-   ![image](https://github.com/user-attachments/assets/a6e800a6-a4f0-4fb9-977e-daf3193c8382)
+   - Next, to generate a Point Cloud, click on the mesh in the DB Tree, then **Edit > Mesh > Sample Points**, leave the default values, and click **OK**.  
+       ![image](https://github.com/user-attachments/assets/1481abca-b19a-41b6-8966-c55e4f86f501)
+       ![image](https://github.com/user-attachments/assets/a6e800a6-a4f0-4fb9-977e-daf3193c8382)
 
-   - You will see a new file created, which is the Point Cloud file.
-   ![image](https://github.com/user-attachments/assets/b1f8e7e9-b560-4a2f-90aa-ccf2d907caca)
+   - You will see a new file created, which is the Point Cloud file.       
+       ![image](https://github.com/user-attachments/assets/b1f8e7e9-b560-4a2f-90aa-ccf2d907caca)
 
    - To view the Point Cloud, uncheck everything except the sampled file.
    ![image](https://github.com/user-attachments/assets/992aa2fc-2c0c-4535-9505-cfe438145477)
