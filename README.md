@@ -40,7 +40,7 @@ docker run --rm -it   -v $(pwd)/map.osm:/app/map.osm   -v $(pwd)/3D_Model:/app/3
 
 ---
 
-### 5. **Create Lanelets**: [Demonstration](https://drive.google.com/file/d/1GsgT-V2fWnFuPw8rWdohsYPsOSAnr716/view?usp=drive_link)
+### 3. **Create Lanelets**: [Demonstration](https://drive.google.com/file/d/1GsgT-V2fWnFuPw8rWdohsYPsOSAnr716/view?usp=drive_link)
 
 #### **Tools Required**:  
 - [Vector Map Builder](https://tools.tier4.jp/vector_map_builder_ll2/)
@@ -79,7 +79,7 @@ docker run --rm -it   -v $(pwd)/map.osm:/app/map.osm   -v $(pwd)/3D_Model:/app/3
     - Search for tutorials on YouTube.  
     - Refer to the [manual](https://docs.web.auto/en/user-manuals/vector-map-builder/how-to-use).  
 
-### 6. **Import Files to Autoware**: [Demonstration](https://drive.google.com/file/d/1JRt64q4x_NL__mK30LJ7Vgzp1ZBU6C9e/view?usp=drive_link)
+### 4. **Import Files to Autoware**: [Demonstration](https://drive.google.com/file/d/1JRt64q4x_NL__mK30LJ7Vgzp1ZBU6C9e/view?usp=drive_link)
 
    - **Tools Required**: [Autoware](https://www.autoware.org/)
    - Import the generated files into Autoware for use in simulations or real-world tests.
