@@ -86,10 +86,3 @@ docker run --rm -it   -v $(pwd)/map.osm:/app/map.osm   -v $(pwd)/3D_Model:/app/3
 
 <br> 
 *Note: README.md is a work in progress. More detailed documentation will be added soon.*
-
-
-- ./osm2world.sh --input map.osm -o output/output.obj
-- pcl_mesh_sampling output.obj output.pcd -leaf_size 0.5 -no_vis_result -n_samples 1000000
-
-
-
