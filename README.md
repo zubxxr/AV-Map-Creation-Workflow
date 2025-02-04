@@ -12,13 +12,29 @@ This repository outlines the steps involved in converting an OpenStreetMap (OSM)
 
 ## Steps:
 
-### 1. **Download OSM File**: [Demonstration](https://drive.google.com/file/d/1siUoWQ66YDEZnNxpCEGZUtRvuZyRF7Ho/view?usp=drive_link)
+### 1. **Create a New Directory**:
+```bash    
+mkdir ~/map_files
+```
+
+---
+
+### 2. **Download OSM File**: [Demonstration](https://drive.google.com/file/d/1siUoWQ66YDEZnNxpCEGZUtRvuZyRF7Ho/view?usp=drive_link)
     
-   - **Tools Required**: Web browser, OpenStreetMap
-   - Select the location you want to create a map for.
+   - **Tools Required**: Web browser, [OpenStreetMap](https://www.openstreetmap.org/)
+   - Open [OpenStreetMap](https://www.openstreetmap.org/), and search for the location you want to create a map for.
+   
+   - Next, click **Export** in the top header and then click **Manually select a different area** on the left side.
+     ![image](https://github.com/user-attachments/assets/f2cce522-7d22-4e11-b32c-a490805a4d1a)
+    
+   - Resize the square as needed.
    ![image](https://github.com/user-attachments/assets/a0fe3473-11da-4b74-9fa5-31b8ce43e652)
 
-   - Click Export to download a **map.osm** file.
+   - Click Export on the left side to download the map. A **map.osm** file will be downloaded to the **Downloads** folder.
+   - Move the **map.osm** file into the directory created earlier:
+     ```bash
+     mv ~/Downloads/map.osm ~/map_files
+     ```
 
 ---
 
