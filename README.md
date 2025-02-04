@@ -57,13 +57,14 @@ docker run --rm -it   -v $(pwd)/map.osm:/app/map.osm   -v $(pwd)/3D_Model:/app/3
 
   ![image](https://github.com/user-attachments/assets/3117a53d-9659-477b-b605-fef19873988c)  
 
-- To set the Lanelet2 map in the correct location, the **Grid Zone** and **100,000-meter square** values are needed.  
+- To set the Lanelet2 map in the correct location, the **Grid Zone** and **100,000-meter square** values are needed.
+- To get those values, the longitude and latitude values are first needed. 
+- Open the map.osm file, and there will be multiple lines with the **lat** and **lon** values.
+  ![image](https://github.com/user-attachments/assets/3bfd614d-9a49-4a18-8315-46cc567f6ba6)
 
-- Use [this website](https://www.gps-coordinates.net/) to get the latitude and longitude of your extracted location from Step 1.  
 
-  ![image](https://github.com/user-attachments/assets/cbd118c3-98af-4cff-b94b-5a55d135431d)  
-
-- Enter the latitude and longitude into [this website](https://legallandconverter.com/p50.html) to obtain the **MGRS coordinates**.  
+- Copy any **lat** and **lon** value and enter them into [this website](https://legallandconverter.com/p50.html) to obtain the **MGRS coordinates**.
+- It does not matter which value you copy because they are all very similar.
 
   ![image](https://github.com/user-attachments/assets/1b0d9bfb-8625-4a34-be4d-1095b2fdad51)  
   ![image](https://github.com/user-attachments/assets/af45ab5c-ff87-42d4-ab17-ce8668410440)  
