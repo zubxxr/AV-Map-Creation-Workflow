@@ -46,12 +46,13 @@ cd map_files
 ### 2. **Generate OBJ Files and PCD Files**:
 - Build the docker container:  
 ```bash
+cd ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process
 docker build -t osm2world-pcl .
 ```
 
 - Make an empty file:
 ```bash
-touch pointcloud_map.pcd
+touch ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/pointcloud_map.pcd
 ```
 
 - Run the container to generate the OBJ files and the PCD file:
