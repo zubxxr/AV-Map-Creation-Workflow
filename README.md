@@ -24,6 +24,26 @@ This repository outlines the steps involved in converting an OpenStreetMap (OSM)
 
 ---
 
+### new 2.
+- Build the docker container:  
+```bash
+docker build -t osm2world-pcl .
+```
+
+- Make an empty file:
+```bash
+touch pointcloud_map.pcd
+```
+
+- Run the container to generate the OBJ files and the PCD file:
+```bash
+docker run --rm -it   -v $(pwd)/map.osm:/app/map.osm   -v $(pwd)/3D_Model:/app/3D_Model   -v $(pwd)/pointcloud_map.pcd:/app/pointcloud_map.pcd   osm2world-pcl /bin/bash
+```
+
+
+
+
+
 ### 2. **Convert OSM to OBJ**: [Demonstration](https://drive.google.com/file/d/1dyTxqLgO2tPrpjYVindg-_BhmtaVfODf/view?usp=drive_link)
 
    - **Tools Required**: [OSM2World](http://osm2world.org/)
