@@ -12,9 +12,11 @@ This repository outlines the steps involved in converting an OpenStreetMap (OSM)
 
 ## Steps:
 
-### 1. **Create a New Directory**:
+### 1. **Create a New Directory and Clone The Repository**:
 ```bash    
 mkdir ~/map_files
+cd ~/map_files
+git clone https://github.com/zubxxr/OSM-to-Pointcloud-and-Lanelet-Conversion-Process
 ```
 
 ---
