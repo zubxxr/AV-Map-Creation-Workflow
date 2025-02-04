@@ -57,7 +57,7 @@ touch ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/pointcloud_ma
 
 - Run the container to generate the OBJ files and the PCD file:
 ```bash
-docker run --rm -it   -v $(pwd)/map.osm:/app/map.osm   -v $(pwd)/3D_Model:/app/3D_Model   -v $(pwd)/pointcloud_map.pcd:/app/pointcloud_map.pcd   osm2world-pcl /bin/bash
+docker run --rm -it -v $(pwd)/map_files/map.osm:/app/map.osm -v $(pwd)/map_files/3D_Model:/app/3D_Model -v $(pwd)/map_files/pointcloud_map.pcd:/app/pointcloud_map.pcd osm2world-pcl /bin/bash
 ```
 
 ---
