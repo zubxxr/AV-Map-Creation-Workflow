@@ -12,11 +12,14 @@ This repository outlines the steps involved in converting an OpenStreetMap (OSM)
 
 ## Steps:
 
-### 1. **Create a New Directory and Clone The Repository**:
-```bash    
-mkdir ~/map_files
-cd ~/map_files
+### 1. **Clone The Repository and Create a New Directory**:
+```bash
+cd ~/
 git clone https://github.com/zubxxr/OSM-to-Pointcloud-and-Lanelet-Conversion-Process
+cd OSM-to-Pointcloud-and-Lanelet-Conversion-Process
+mkdir map_files
+cd map_files
+
 ```
 
 ---
@@ -35,7 +38,7 @@ git clone https://github.com/zubxxr/OSM-to-Pointcloud-and-Lanelet-Conversion-Pro
    - Click Export on the left side to download the map. A **map.osm** file will be downloaded to the **Downloads** folder.
    - Move the **map.osm** file into the directory created earlier:
      ```bash
-     mv ~/Downloads/map.osm ~/map_files
+     mv ~/Downloads/map.osm ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files
      ```
 
 ---
