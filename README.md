@@ -131,7 +131,10 @@ This step converts an OSM file into:
       mv ~/Downloads/new_lanelet2_maps.osm ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/lanelet2_map.osm
       ```
 
-### 4. **Import Files to Autoware**: [Demonstration](https://drive.google.com/file/d/1JRt64q4x_NL__mK30LJ7Vgzp1ZBU6C9e/view?usp=drive_link)
+### 4. **Remove the Lat/Long Fields**:
+
+
+### 5. **Import Files to Autoware**: [Demonstration](https://drive.google.com/file/d/1JRt64q4x_NL__mK30LJ7Vgzp1ZBU6C9e/view?usp=drive_link)
 
    - **Tools Required**: [Autoware](https://www.autoware.org/)
    - After the steps above, the following files should be available in your directory:
@@ -141,7 +144,7 @@ This step converts an OSM file into:
   
    - Import the generated files into Autoware for use in simulations or real-world tests.
      
-### 5. **Import Files to AWSIM**: [Demonstration]()
+### 6. **Import Files to AWSIM**: [Demonstration]()
 
 <br> 
 *Note: README.md is a work in progress. More detailed documentation will be added soon.*
