@@ -59,17 +59,21 @@ This step converts an OSM file into:
     touch ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/pointcloud_map.pcd
     ```
 
-3. Run the Docker Container to Generate Files
+3. Run the Docker Container to Generate Files:
     ```bash
     docker run --rm -it -v $(pwd)/map_files/map.osm:/app/map.osm -v $(pwd)/map_files/3D_Model:/app/3D_Model -v $(pwd)/map_files/pointcloud_map.pcd:/app/pointcloud_map.pcd osm2world-pcl /bin/bash
     ```
-4. Verify the Output Files
+4. Verify the Output Files:
     ```bash
     ls ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files
     ls ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/3D_Model
     ```
     ![image](https://github.com/user-attachments/assets/7c60231d-5045-49b1-abac-2b90151af23a)
 
+5. Change Folder Ownership:
+   ```bash
+   sudo chown -R $USER:$USER ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/3D_Model
+   ```
 
 ---
 
@@ -84,7 +88,10 @@ This step converts an OSM file into:
     - Navigate to **File > Import PCD > Browse**, select the point cloud file created from Step 3, and click **Import**.  
     - You will see the point cloud in the window.  
 
-      ![image](https://github.com/user-attachments/assets/6bf54634-dc88-4df5-a257-57de2560cdce)  
+      ![image](https://github.com/user-attachments/assets/6bf54634-dc88-4df5-a257-57de2560cdce)
+
+      ![image](https://github.com/user-attachments/assets/7c8daacb-1f08-4055-9464-34c68ec10cf1)
+
 
 2. Next, click **Create > Create Lanelet2Maps > Change Map Projector Info** and set the projector type to **MGRS**.
       ![image](https://github.com/user-attachments/assets/729e6e9a-9230-4633-8315-48a485ce6f42)
