@@ -29,47 +29,47 @@ cd map_files
    - **Tools Required**: Web browser, [OpenStreetMap](https://www.openstreetmap.org/)
    1. Open [OpenStreetMap](https://www.openstreetmap.org/), and search for the location you want to create a map for.
    
-   2. Next, click **Export** in the top header and then click **Manually select a different area** on the left side.
-     ![image](https://github.com/user-attachments/assets/f2cce522-7d22-4e11-b32c-a490805a4d1a)
+   2. Click **Export** in the top header, then select **Manually select a different area** on the left side.
+   ![image](https://github.com/user-attachments/assets/f2cce522-7d22-4e11-b32c-a490805a4d1a)
     
-   3. Resize the square as needed.
+   3. Resize the selection area as needed.
    ![image](https://github.com/user-attachments/assets/a0fe3473-11da-4b74-9fa5-31b8ce43e652)
 
-   4. Click Export on the left side to download the map. A **map.osm** file will be downloaded to the **Downloads** folder.
+   4. Click **Export** on the left side to download the OSM file. A file named **map.osm** will be saved in your **Downloads** folder.
    5. Move the **map.osm** file into the directory created earlier.
-      
-     ```bash
-     mv ~/Downloads/map.osm ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files
-     ```
+         ```bash
+         mv ~/Downloads/map.osm ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files
+         ```
 
 ---
 
 ### 2. **Generate OBJ Files and PCD Files**:
 
-This step involves inputting an OSM file into the Docker container, which will convert it into a Point Cloud Data (PCD) file, and a 3D Model consisting of a OBJ file, a MTL file, and a textures folder with PNG files.
-
+This step converts an OSM file into:  
+- A **Point Cloud Data (PCD) file**  
+- A **3D Model**, including an OBJ file, MTL file, and a textures folder with PNG files  
 
 1. Build the Docker Container:  
-```bash
-cd ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process
-docker build -t osm2world-pcl .
-```
+    ```bash
+    cd ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process
+    docker build -t osm2world-pcl .
+    ```
 
-2. Make an Empty File:
-```bash
-touch ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/pointcloud_map.pcd
-```
+2. Create an Empty PCD File (prevents the Container mistakenly saving it as a folder later):
+    ```bash
+    touch ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/pointcloud_map.pcd
+    ```
 
-3. Run the Container to Generate the 3D Model Files and the PCD File:
-```bash
-docker run --rm -it -v $(pwd)/map_files/map.osm:/app/map.osm -v $(pwd)/map_files/3D_Model:/app/3D_Model -v $(pwd)/map_files/pointcloud_map.pcd:/app/pointcloud_map.pcd osm2world-pcl /bin/bash
-```
-4. Verify that the files were saved locally:
-```bash
-ls ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files
-ls ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/3D_Model
-```
-![image](https://github.com/user-attachments/assets/7c60231d-5045-49b1-abac-2b90151af23a)
+3. Run the Docker Container to Generate Files
+    ```bash
+    docker run --rm -it -v $(pwd)/map_files/map.osm:/app/map.osm -v $(pwd)/map_files/3D_Model:/app/3D_Model -v $(pwd)/map_files/pointcloud_map.pcd:/app/pointcloud_map.pcd osm2world-pcl /bin/bash
+    ```
+4. Verify the Output Files
+    ```bash
+    ls ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files
+    ls ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/3D_Model
+    ```
+    ![image](https://github.com/user-attachments/assets/7c60231d-5045-49b1-abac-2b90151af23a)
 
 
 ---
@@ -82,16 +82,12 @@ ls ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/3D_Model
 - To use this tool, a point cloud must first be imported, and then a Lanelet2 map can be created on top of it.  
 
 - Import the `.pcd` file into **Vector Map Builder**:  
-    - Navigate to **File > Import PCD > Browse**, select the Point Cloud Data file created from Step 3, and click **Import**.  
-    - You will see the Point Cloud in the **Vector Map Builder** interface.  
+    - Navigate to **File > Import PCD > Browse**, select the point cloud file created from Step 3, and click **Import**.  
+    - You will see the point cloud in the window.  
 
-  ![image](https://github.com/user-attachments/assets/6bf54634-dc88-4df5-a257-57de2560cdce)
-
-  ![image](https://github.com/user-attachments/assets/3fbf5f67-5c93-4d78-a827-365cd5f34d70)
-
+  ![image](https://github.com/user-attachments/assets/6bf54634-dc88-4df5-a257-57de2560cdce)  
 
 - Next, click **Create > Create Lanelet2Maps > Change Map Projector Info** and set the projector type to **MGRS**.  
-  ![image](https://github.com/user-attachments/assets/050b3cbc-66eb-45b9-8c47-f5b2165f2d19)
 
   ![image](https://github.com/user-attachments/assets/3117a53d-9659-477b-b605-fef19873988c)  
 
