@@ -2,7 +2,7 @@
 
 This repository outlines the steps involved in converting an OpenStreetMap (OSM) file into a Unity 3D model compatible with AWSIM and Autoware. Demonstrations have been provided below for each part. This [Google Drive](https://drive.google.com/drive/folders/1Mtkr13VCS5KdGLns7JRVTOxwJmy0Xnit?usp=drive_link) also contains all the demonstrations.
 
-![image](https://github.com/user-attachments/assets/5c396cd7-87e4-4a1a-899a-3e4696417f11)
+![image](https://github.com/user-attachments/assets/0f467bc1-0ee7-4dc2-bb9e-053c1b262a91)
 
 ## Table of Contents
 1. [Download OSM File](#download-osm-file)
