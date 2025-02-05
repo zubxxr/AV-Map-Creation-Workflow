@@ -82,12 +82,16 @@ ls ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/3D_Model
 - To use this tool, a point cloud must first be imported, and then a Lanelet2 map can be created on top of it.  
 
 - Import the `.pcd` file into **Vector Map Builder**:  
-    - Navigate to **File > Import PCD > Browse**, select the point cloud file created from Step 3, and click **Import**.  
-    - You will see the point cloud in the window.  
+    - Navigate to **File > Import PCD > Browse**, select the Point Cloud Data file created from Step 3, and click **Import**.  
+    - You will see the Point Cloud in the **Vector Map Builder** interface.  
 
-  ![image](https://github.com/user-attachments/assets/6bf54634-dc88-4df5-a257-57de2560cdce)  
+  ![image](https://github.com/user-attachments/assets/6bf54634-dc88-4df5-a257-57de2560cdce)
+
+  ![image](https://github.com/user-attachments/assets/3fbf5f67-5c93-4d78-a827-365cd5f34d70)
+
 
 - Next, click **Create > Create Lanelet2Maps > Change Map Projector Info** and set the projector type to **MGRS**.  
+  ![image](https://github.com/user-attachments/assets/050b3cbc-66eb-45b9-8c47-f5b2165f2d19)
 
   ![image](https://github.com/user-attachments/assets/3117a53d-9659-477b-b605-fef19873988c)  
 
