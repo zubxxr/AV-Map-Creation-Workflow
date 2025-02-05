@@ -126,13 +126,21 @@ This step converts an OSM file into:
     - Press **OK** on the popup.
     - Click **Download**.
 
-    - Move it to the working directory and rename it for Autoware naming conventions.
+    - Move it to the working directory..
       ```bash
-      mv ~/Downloads/new_lanelet2_maps.osm ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/lanelet2_map.osm
+      mv ~/Downloads/new_lanelet2_maps.osm ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/
       ```
+---
 
-### 4. **Remove the Lat/Long Fields**:
+### 4. **Remove the Lat/Long Fields and Rename it for Autoware Naming Conventions**:
 
+Run the following command:
+
+```bash
+cd ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process
+python3 remove_lat_lon.py map_files/new_lanelet2_maps.osm map_files/lanelet2_map.osm
+```
+---
 
 ### 5. **Import Files to Autoware**: [Demonstration](https://drive.google.com/file/d/1JRt64q4x_NL__mK30LJ7Vgzp1ZBU6C9e/view?usp=drive_link)
 
@@ -143,7 +151,9 @@ This step converts an OSM file into:
        - A Lanelet2 file named **lanelet2_map.osm**
   
    - Import the generated files into Autoware for use in simulations or real-world tests.
-     
+
+---
+
 ### 6. **Import Files to AWSIM**: [Demonstration]()
 
 <br> 
