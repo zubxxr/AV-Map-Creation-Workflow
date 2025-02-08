@@ -88,9 +88,7 @@ This step converts an OSM file into:
     - Navigate to **File > Import PCD > Browse**, select the point cloud file created from Step 3, and click **Import**.  
     - You will see the point cloud in the window.  
 
-      ![image](https://github.com/user-attachments/assets/6bf54634-dc88-4df5-a257-57de2560cdce)
-
-      ![image](https://github.com/user-attachments/assets/7c8daacb-1f08-4055-9464-34c68ec10cf1)
+      ![image](https://github.com/user-attachments/assets/3cf18bc9-0763-4ae2-8310-2b37a0e09c35)
 
 
 2. Next, click **Create > Create Lanelet2Maps > Change Map Projector Info** and set the projector type to **MGRS**.
