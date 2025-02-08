@@ -159,3 +159,4 @@ python3 remove_lat_lon.py map_files/new_lanelet2_maps.osm map_files/lanelet2_map
 
 
 - LIBGL_ALWAYS_SOFTWARE=1 flatpak run org.cloudcompare.CloudCompare -SILENT -O output.obj -AUTO_SAVE OFF -SAMPLE_MESH DENSITY 500 -C_EXPORT_FMT PCD -SAVE_CLOUDS
+- docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd)/map_files/map.osm:/app/map.osm --entrypoint bash -it osm-3d-pcd-pipeline
