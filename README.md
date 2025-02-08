@@ -51,7 +51,7 @@ This step converts an OSM file into:
 1. Build the Docker Container:  
     ```bash
     cd ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process
-    docker build -t osm2world-pcl .
+    docker build -t osm-3d-pcd-pipeline .
     ```
 
 2. Create an Empty PCD File (prevents the Container mistakenly saving it as a folder later):
