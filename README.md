@@ -158,3 +158,6 @@ python3 remove_lat_lon.py map_files/new_lanelet2_maps.osm map_files/lanelet2_map
 
 <br> 
 *Note: README.md is a work in progress. More detailed documentation will be added soon.*
+
+
+- LIBGL_ALWAYS_SOFTWARE=1 flatpak run org.cloudcompare.CloudCompare -SILENT -O output.obj -AUTO_SAVE OFF -SAMPLE_MESH DENSITY 500 -C_EXPORT_FMT PCD -SAVE_CLOUDS
