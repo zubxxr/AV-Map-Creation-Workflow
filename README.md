@@ -48,7 +48,7 @@ This step converts an OSM file into:
 - A **Point Cloud Data (PCD) file**  
 - A **3D Model**, consisting of an OBJ file, MTL file, and a textures folder with PNG files  
 
-1. Build the Docker Container:  
+1. Navigate to the Workspace:  
     ```bash
     cd ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process
     ```
@@ -62,18 +62,18 @@ This step converts an OSM file into:
    docker pull zubxxr/osm-3d-pcd-pipeline:latest
    ```
 
-3. Run the Docker Container to Generate Files:
+4. Run the Docker Container to Generate Files:
     ```bash
     docker run --rm -it -e QT_QPA_PLATFORM=offscreen -v $(pwd)/map_files/map.osm:/app/map.osm -v $(pwd)/map_files/3D_Model:/app/3D_Model -v $(pwd)/map_files/pointcloud_map.pcd:/app/pointcloud_map.pcd zubxxr/osm-3d-pcd-pipeline /bin/bash
     ```
-4. Verify the Output Files:
+5. Verify the Output Files:
     ```bash
     ls ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files
     ls ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/3D_Model
     ```
     ![image](https://github.com/user-attachments/assets/7c60231d-5045-49b1-abac-2b90151af23a)
 
-5. Change Folder Ownership:
+6. Change Folder Ownership:
    ```bash
    sudo chown -R $USER:$USER ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/3D_Model
    ```
