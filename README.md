@@ -61,7 +61,7 @@ This step converts an OSM file into:
 
 3. Run the Docker Container to Generate Files:
     ```bash
-    docker run --rm -it -v $(pwd)/map_files/map.osm:/app/map.osm -v $(pwd)/map_files/3D_Model:/app/3D_Model -v $(pwd)/map_files/pointcloud_map.pcd:/app/pointcloud_map.pcd osm-3d-pcd-pipeline /bin/bash
+    docker run --rm -it -e QT_QPA_PLATFORM=offscreen -v $(pwd)/map_files/map.osm:/app/map.osm -v $(pwd)/map_files/3D_Model:/app/3D_Model -v $(pwd)/map_files/pointcloud_map.pcd:/app/pointcloud_map.pcd osm-3d-pcd-pipeline /bin/bash
     ```
 4. Verify the Output Files:
     ```bash
