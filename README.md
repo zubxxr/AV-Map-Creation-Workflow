@@ -47,7 +47,7 @@ cd map_files
 
 ---
 
-### 2. **Generate OBJ Files and PCD Files**:
+### 3. **Generate OBJ Files and PCD Files**:
 
 This step converts an OSM file into:  
 - A **Point Cloud Data (PCD) file**  
@@ -85,7 +85,7 @@ This step converts an OSM file into:
 
 ---
 
-### 3. **Create Lanelets**: [Demonstration](https://drive.google.com/file/d/1GsgT-V2fWnFuPw8rWdohsYPsOSAnr716/view?usp=drive_link)
+### 4. **Create Lanelets**: [Demonstration](https://drive.google.com/file/d/1GsgT-V2fWnFuPw8rWdohsYPsOSAnr716/view?usp=drive_link)
 
 #### **Tools Required**:  
 - [Vector Map Builder](https://tools.tier4.jp/vector_map_builder_ll2/)
@@ -138,7 +138,7 @@ This step converts an OSM file into:
       ```
 ---
 
-### 4. **Remove the Lat/Long Fields and Rename it for Autoware Naming Conventions**:
+### 5. **Remove the Lat/Long Fields and Rename it for Autoware Naming Conventions**:
 
 Run the following command:
 
@@ -148,7 +148,7 @@ python3 remove_lat_lon.py map_files/new_lanelet2_maps.osm map_files/lanelet2_map
 ```
 ---
 
-### 5. **Import Files to Autoware**: [Demonstration](https://drive.google.com/file/d/1JRt64q4x_NL__mK30LJ7Vgzp1ZBU6C9e/view?usp=drive_link)
+### 6. **Import Files to Autoware**: [Demonstration](https://drive.google.com/file/d/1JRt64q4x_NL__mK30LJ7Vgzp1ZBU6C9e/view?usp=drive_link)
 
    - **Tools Required**: [Autoware](https://www.autoware.org/)
    - After the steps above, the following files should be available in your directory:
@@ -160,7 +160,7 @@ python3 remove_lat_lon.py map_files/new_lanelet2_maps.osm map_files/lanelet2_map
 
 ---
 
-### 6. **Import Files to AWSIM**: [Demonstration]()
+### 7. **Import Files to AWSIM**: [Demonstration]()
 
 <br> 
 *Note: README.md is a work in progress. More detailed documentation will be added soon.*
