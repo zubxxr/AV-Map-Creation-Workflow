@@ -1,5 +1,10 @@
 # OSM to Unity 3D Model Conversion Workflow for AWSIM and Autoware
 
+**Published!** This workflow was officially published as a peer-reviewed paper at [GEOProcessing 2025](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html).  
+**Citation:** Zubair Islam, et al., *"A Workflow for Streamlining 3D Map Creation for Autonomous Vehicle Testing"*, GEOProcessing 2025.
+
+# OSM to Unity 3D Model Conversion Workflow for AWSIM and Autoware
+
 This repository outlines the steps involved in converting an OpenStreetMap (OSM) file into a Unity 3D model compatible with AWSIM and Autoware. Demonstrations have been provided below for each part. This [Google Drive](https://drive.google.com/drive/folders/1Mtkr13VCS5KdGLns7JRVTOxwJmy0Xnit?usp=drive_link) also contains all the demonstrations.
 
 ## Map Creation Workflow
@@ -170,3 +175,29 @@ python3 remove_lat_lon.py map_files/new_lanelet2_maps.osm map_files/lanelet2_map
   ```bash
   docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd)/map_files/map.osm:/app/map.osm --entrypoint bash -it osm-3d-pcd-pipeline
   ```
+
+
+---
+
+## Related Publication
+
+This repository supports the methods described in the following publication:
+
+**Zubair Islam**, Ahmaad Ansari, George Daoud, Mohamed El-Darieby  
+*A Workflow for Streamlining 3D Map Creation for Autonomous Vehicle Testing*  
+In Proceedings of GEOProcessing 2025  
+[Read the full paper](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html)
+
+<details>
+<summary>BibTeX Citation</summary>
+
+```bibtex
+@inproceedings{islam2025workflow,
+  author    = {Zubair Islam and Ahmaad Ansari and George Daoud and Mohamed El-Darieby},
+  title     = {A Workflow for Streamlining 3D Map Creation for Autonomous Vehicle Testing},
+  booktitle = {Proceedings of GEOProcessing 2025},
+  year      = {2025},
+  url       = {https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html}
+}
+```
+</details>
