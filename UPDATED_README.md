@@ -1,7 +1,7 @@
 # OSM to Unity 3D Model Conversion Workflow for AWSIM and Autoware
 
-🚨 **Published!** This workflow was officially published as a peer-reviewed paper at [GEOProcessing 2025](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html).  
-📄 **Citation:** Zubair Islam, et al., *"A Workflow for Streamlining 3D Map Creation for Autonomous Vehicle Testing"*, GEOProcessing 2025.
+**Published!** This workflow was officially published as a peer-reviewed paper at [GEOProcessing 2025](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html).  
+**Citation:** Zubair Islam, et al., *"A Workflow for Streamlining 3D Map Creation for Autonomous Vehicle Testing"*, GEOProcessing 2025.
 
 # OSM to Unity 3D Model Conversion Workflow for AWSIM and Autoware
 
@@ -179,14 +179,14 @@ python3 remove_lat_lon.py map_files/new_lanelet2_maps.osm map_files/lanelet2_map
 
 ---
 
-## 📄 Related Publication
+## Related Publication
 
 This repository supports the methods described in the following publication:
 
 **Zubair Islam**, Ahmaad Ansari, George Daoud, Mohamed El-Darieby  
 *A Workflow for Streamlining 3D Map Creation for Autonomous Vehicle Testing*  
 In Proceedings of GEOProcessing 2025  
-[🔗 Read the full paper](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html)
+[Read the full paper](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html)
 
 <details>
 <summary>BibTeX Citation</summary>
