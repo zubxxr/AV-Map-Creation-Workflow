@@ -185,19 +185,3 @@ This repository supports the methods described in the following publication:
 *A Workflow for Streamlining 3D Map Creation for Autonomous Vehicle Testing*  
 In Proceedings of GEOProcessing 2025  
 [Read the full paper](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html)
-
-<details>
-<summary>BibTeX Citation</summary>
-
-```bibtex
-@inproceedings{islam2025workflow,
-  author    = {Zubair Islam and Ahmaad Ansari and George Daoud and Mohamed El-Darieby},
-  title     = {A Workflow for Streamlining 3D Map Creation for Autonomous Vehicle Testing},
-  booktitle = {Proceedings of GEOProcessing 2025},
-  year      = {2025},
-  url       = {https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html}
-}
-```
-</details>
-
-*Note: README.md is a work in progress. More detailed documentation will be added soon.*
