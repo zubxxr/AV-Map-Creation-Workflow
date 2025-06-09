@@ -29,8 +29,7 @@ For more details and visuals, refer to the [paper](https://www.thinkmind.org/lib
    - [5. Remove the Lat/Long Fields and Rename it for Autoware Naming Conventions](#5-remove-the-latlong-fields-and-rename-it-for-autoware-naming-conventions)
    - [6. Import Files to Autoware](#6-import-files-to-autoware-demonstration)
    - [7. Import Files to AWSIM](#7-import-files-to-awsim-demonstration)
-2. [System Demonstration](#system-demonstration)
-   - [Autonomous Valet Parking in Action](#autonomous-valet-parking-in-action)
+2. [Workflow Success Demonstration](#workflow-success-demonstration)
 
 
 ## Getting Started
@@ -200,25 +199,22 @@ These files can now be imported into Autoware for simulation or real-world deplo
 
 ---
 
-## System Demonstration
+## Workflow Success Demonstration
+This section shows an Autonomous Valet Parking scenario in action on the map created using the workflow.
 
-### **Autonomous Valet Parking in Action**
-
-The following sequence demonstrates the full AVP system in action — from initialization in AWSIM and Autoware to successful parking execution.
-
-#### Initial Startup
+### Initial Startup
 *AWSIM (left) and Autoware (right) are initialized with the 3D Model, Lanelet2 map and point cloud loaded.*
 
 ![image](https://github.com/user-attachments/assets/0b7c5f4f-debe-4848-be7e-f8919a99c18b)
 
-#### Goal Assignment and Path Planning
+### Goal Assignment and Path Planning
 
 *A goal is set, and the AV begins following the planned path.*
 
 ![image](https://github.com/user-attachments/assets/f9b89e0c-2359-4f17-b0ff-eda4dd4d2653)
 
 
-#### Destination Reached and Parking Complete
+### Destination Reached and Parking Complete
 *The car successfully reaches the destination parking spot and stops precisely within the lane boundaries.*
 
 ![image](https://github.com/user-attachments/assets/f3e45604-2fe0-4f5b-9f1a-c98c1c2fa583)
