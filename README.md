@@ -9,6 +9,8 @@ This workflow was officially published as a peer-reviewed paper at [GEOProcessin
 
 This repository outlines the steps involved in converting an OpenStreetMap (OSM) file into a Unity 3D model, Point Cloud, and Lanelet2 file compatible with AWSIM and Autoware. Demonstrations have been provided below for each part. This [Google Drive](https://drive.google.com/drive/folders/1Mtkr13VCS5KdGLns7JRVTOxwJmy0Xnit?usp=drive_link) also contains all the demonstrations.
 
+For more details and visuals, refer to the [paper](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html).
+
 ## Map Creation Workflow
 ![image](https://github.com/user-attachments/assets/975b8182-9a63-4b15-b198-fe80a1c99708)
 
