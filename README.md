@@ -137,6 +137,12 @@ This step converts an OSM file into:
     - Follow the [Demonstration](https://drive.google.com/file/d/1GsgT-V2fWnFuPw8rWdohsYPsOSAnr716/view?usp=drive_link).  
     - Search for tutorials on YouTube.  
     - Refer to the [manual](https://docs.web.auto/en/user-manuals/vector-map-builder/how-to-use).
+    - Example of lanelets and parking spaces created:
+
+      ![image](https://github.com/user-attachments/assets/a9c2e77c-0f3f-47fd-8a03-29f0ed805781)
+
+
+
  
 11. Export the Lanelet2 Map.
     - Click **File > Export Lanelet2Maps**.
@@ -168,10 +174,16 @@ python3 remove_lat_lon.py map_files/new_lanelet2_maps.osm map_files/lanelet2_map
        - A Lanelet2 file named **lanelet2_map.osm**
   
    - Import the generated files into Autoware for use in simulations or real-world tests.
+     
+     ![image](https://github.com/user-attachments/assets/760fefa1-7668-4c97-9531-42e42b6a50a9)
+
 
 ---
 
 ### 7. **Import Files to AWSIM**: [Demonstration]()
+
+Lanelet2 map and 3D model imported into AWSIM.
+![image](https://github.com/user-attachments/assets/d19eff33-39b4-48cd-9992-01c18400a827)
 
 ---
 
