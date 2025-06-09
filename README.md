@@ -21,10 +21,16 @@ For more details and visuals, refer to the [paper](https://www.thinkmind.org/lib
 
 
 ## Table of Contents
-1. [Download OSM File](#download-osm-file)
-2. [Generate OBJ Files and PCD Files](#generate-obj-files-and-pcd-files)
-3. [Create Lanelets](#create-lanelets)
-4. [Import Files to Autoware](#import-files-to-autoware)
+1. [Getting Started](#getting-started)
+   - [1. Clone the Repository and Create a New Directory](#1-clone-the-repository-and-create-a-new-directory)
+   - [2. Download OSM File](#2-download-osm-file-demonstration)
+   - [3. Generate OBJ Files and PCD Files](#3-generate-obj-files-and-pcd-files)
+   - [4. Create Lanelets](#4-create-lanelets-demonstration)
+   - [5. Remove the Lat/Long Fields and Rename it for Autoware Naming Conventions](#5-remove-the-latlong-fields-and-rename-it-for-autoware-naming-conventions)
+   - [6. Import Files to Autoware](#6-import-files-to-autoware-demonstration)
+   - [7. Import Files to AWSIM](#7-import-files-to-awsim-demonstration)
+2. [System Demonstration](#system-demonstration)
+   - [Autonomous Valet Parking in Action](#autonomous-valet-parking-in-action)
 
 
 ## Getting Started
