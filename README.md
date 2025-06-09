@@ -2,7 +2,7 @@
 
 ## Publication
 
-This workflow was officially published as a peer-reviewed paper at [GEOProcessing 2025](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html).  
+This workflow was officially published as a peer-reviewed [paper](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html) at [GEOProcessing 2025](https://www.iaria.org/conferences2025/AwardsGEOProcessing25.html).  
 **Citation:** Zubair Islam, et al., *"A Workflow for Map Creation in Autonomous Vehicle Simulations"*, GEOProcessing 2025.
 
 ---
