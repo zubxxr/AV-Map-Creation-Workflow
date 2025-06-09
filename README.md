@@ -1,6 +1,8 @@
-# OSM to Unity 3D Model Conversion Workflow for AWSIM and Autoware
+# AV Map Creation Workflow for Autonomous Vehicle Simulations
 
-**Published!** This workflow was officially published as a peer-reviewed paper at [GEOProcessing 2025](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html).  
+## Publication
+
+This workflow was officially published as a peer-reviewed paper at [GEOProcessing 2025](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html).  
 **Citation:** Zubair Islam, et al., *"A Workflow for Map Creation in Autonomous Vehicle Simulations"*, GEOProcessing 2025.
 
 ---
