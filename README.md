@@ -27,8 +27,8 @@ This repository outlines the steps involved in converting an OpenStreetMap (OSM)
 ### 1. **Clone The Repository and Create a New Directory**:
 ```bash
 cd ~/
-git clone https://github.com/zubxxr/OSM-to-Pointcloud-and-Lanelet-Conversion-Process
-cd OSM-to-Pointcloud-and-Lanelet-Conversion-Process
+git clone https://github.com/zubxxr/AV-Map-Creation-Workflow
+cd AV-Map-Creation-Workflow
 mkdir map_files
 cd map_files
 ```
@@ -49,7 +49,7 @@ cd map_files
    4. Click **Export** on the left side to download the OSM file. A file named **map.osm** will be saved in your **Downloads** folder.
    5. Move the **map.osm** file into the directory created earlier.
          ```bash
-         mv ~/Downloads/map.osm ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files
+         mv ~/Downloads/map.osm ~/AV-Map-Creation-Workflow/map_files
          ```
 
 ---
@@ -62,12 +62,12 @@ This step converts an OSM file into:
 
 1. Navigate to the Workspace:  
     ```bash
-    cd ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process
+    cd ~/AV-Map-Creation-Workflow
     ```
 
 2. Create an Empty PCD File (prevents the Container mistakenly saving it as a folder later):
     ```bash
-    touch ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/pointcloud_map.pcd
+    touch ~/AV-Map-Creation-Workflow/map_files/pointcloud_map.pcd
     ```
 3. Pull the Docker Container:
    ```bash
@@ -80,14 +80,14 @@ This step converts an OSM file into:
     ```
 5. Verify the Output Files:
     ```bash
-    ls ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files
-    ls ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/3D_Model
+    ls ~/AV-Map-Creation-Workflow/map_files
+    ls ~/AV-Map-Creation-Workflow/map_files/3D_Model
     ```
     ![image](https://github.com/user-attachments/assets/7c60231d-5045-49b1-abac-2b90151af23a)
 
 6. Change Folder Ownership:
    ```bash
-   sudo chown -R $USER:$USER ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/3D_Model
+   sudo chown -R $USER:$USER ~/AV-Map-Creation-Workflow/map_files/3D_Model
    ```
 
 ---
@@ -141,7 +141,7 @@ This step converts an OSM file into:
 
     - Move it to the working directory..
       ```bash
-      mv ~/Downloads/new_lanelet2_maps.osm ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process/map_files/
+      mv ~/Downloads/new_lanelet2_maps.osm ~/AV-Map-Creation-Workflow/map_files/
       ```
 ---
 
@@ -150,7 +150,7 @@ This step converts an OSM file into:
 Run the following command:
 
 ```bash
-cd ~/OSM-to-Pointcloud-and-Lanelet-Conversion-Process
+cd ~/AV-Map-Creation-Workflow
 python3 remove_lat_lon.py map_files/new_lanelet2_maps.osm map_files/lanelet2_map.osm
 ```
 ---
