@@ -26,7 +26,8 @@ For more details and visuals, refer to the [paper](https://www.thinkmind.org/lib
 3. [Create Lanelets](#create-lanelets)
 4. [Import Files to Autoware](#import-files-to-autoware)
 
-## Steps:
+
+## Getting Started
 
 ### 1. **Clone The Repository and Create a New Directory**:
 ```bash
@@ -167,27 +168,58 @@ python3 remove_lat_lon.py map_files/new_lanelet2_maps.osm map_files/lanelet2_map
 
 ### 6. **Import Files to Autoware**: [Demonstration](https://drive.google.com/file/d/1JRt64q4x_NL__mK30LJ7Vgzp1ZBU6C9e/view?usp=drive_link)
 
-   - **Tools Required**: [Autoware](https://www.autoware.org/)
-   - After the steps above, the following files should be available in your directory:
-       - A **Point Cloud Data (PCD) file** named **pointcloud_map.pcd**  
-       - A **3D Model**, consisting of an OBJ file, MTL file, and a textures folder with PNG files
-       - A Lanelet2 file named **lanelet2_map.osm**
-  
-   - Import the generated files into Autoware for use in simulations or real-world tests.
-     
-     ![image](https://github.com/user-attachments/assets/760fefa1-7668-4c97-9531-42e42b6a50a9)
+- **Tools Required**: [Autoware](https://www.autoware.org/)
 
+After completing the previous steps, your working directory should contain the following:
+
+- **Point Cloud Map**: `pointcloud_map.pcd`  
+- **3D Model Assets**:
+  - `map.obj`  
+  - `map.mtl`  
+  - `textures/` folder containing `.png` images  
+- **Lanelet2 Vector Map**: `lanelet2_map.osm`
+
+These files can now be imported into Autoware for simulation or real-world deployment.
+
+#### Lanelet2 Map and Point Cloud Imported into Autoware
+![Importing Files into Autoware](https://github.com/user-attachments/assets/760fefa1-7668-4c97-9531-42e42b6a50a9)
 
 ---
 
 ### 7. **Import Files to AWSIM**: [Demonstration]()
+[To do]
 
-Lanelet2 map and 3D model imported into AWSIM.
+#### Lanelet2 Map and 3D Model Imported into AWSIM
 ![image](https://github.com/user-attachments/assets/d19eff33-39b4-48cd-9992-01c18400a827)
 
 ---
 
-### For Debugging:
+## System Demonstration
+
+### **Autonomous Valet Parking in Action**
+
+The following sequence demonstrates the full AVP system in action — from initialization in AWSIM and Autoware to successful parking execution.
+
+#### Initial Startup
+*AWSIM (left) and Autoware (right) are initialized with the 3D Model, Lanelet2 map and point cloud loaded.*
+
+![image](https://github.com/user-attachments/assets/0b7c5f4f-debe-4848-be7e-f8919a99c18b)
+
+#### Goal Assignment and Path Planning
+
+*A goal is set, and the AV begins following the planned path.*
+
+![image](https://github.com/user-attachments/assets/f9b89e0c-2359-4f17-b0ff-eda4dd4d2653)
+
+
+#### Destination Reached and Parking Complete
+*The car successfully reaches the destination parking spot and stops precisely within the lane boundaries.*
+
+![image](https://github.com/user-attachments/assets/f3e45604-2fe0-4f5b-9f1a-c98c1c2fa583)
+
+
+
+## For Debugging:
 - To enter the container, run:
   ```bash
   docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd)/map_files/map.osm:/app/map.osm --entrypoint bash -it osm-3d-pcd-pipeline
