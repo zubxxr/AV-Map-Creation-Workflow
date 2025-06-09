@@ -11,10 +11,12 @@ This repository outlines the steps involved in converting an OpenStreetMap (OSM)
 
 For more details and visuals, refer to the [paper](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html).
 
-## Map Creation Workflow
+## Architecture
+
+### Map Creation Workflow
 ![image](https://github.com/user-attachments/assets/975b8182-9a63-4b15-b198-fe80a1c99708)
 
-## Automated Docker Container Workflow
+### Automated Docker Container Workflow
 ![image](https://github.com/user-attachments/assets/eff78a19-81f3-4990-9137-efca93cb049d)
 
 
