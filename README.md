@@ -247,8 +247,8 @@ Cited Tools & Techniques:
 - CloudCompare
 - Point Cloud Library (PCL)
 - Vector Map Builder
-- Autoware Universe (2024.09)
-- AWSIM
+- Autoware Universe (2024.11)
+- AWSIM Labs
 
 ---
 
