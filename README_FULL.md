@@ -22,6 +22,8 @@ This repository outlines a simulator-agnostic workflow to create maps for Autono
 
 These outputs are compatible with **Autoware** and **AWSIM**, facilitating both virtual AV testing and future real-world deployment. The workflow was designed to address the lack of easily reproducible, parking-lot-sized maps for AVP (Autonomous Valet Parking) research.
 
+Demonstrations have been provided below for each part. This [Google Drive](https://drive.google.com/drive/folders/1Mtkr13VCS5KdGLns7JRVTOxwJmy0Xnit?usp=drive_link) also contains all the demonstrations.
+
 ## Motivation
 
 At the time of this project's development, AWSIM and Autoware only included a single city-scale map, which lacked critical low-speed elements like parking lots. Moreover, existing documentation for map creation was often outdated or platform-dependent (e.g., CARLA, LGSVL).
