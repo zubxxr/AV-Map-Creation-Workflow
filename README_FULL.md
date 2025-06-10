@@ -61,6 +61,9 @@ cd map_files
 ```
 
 ### Step 2: Download the OSM File
+
+[Demonstration](https://drive.google.com/file/d/1siUoWQ66YDEZnNxpCEGZUtRvuZyRF7Ho/view?usp=drive_link)
+
 Use **OpenStreetMap** to export your desired location as an OSM file.
 
 1. Open [OpenStreetMap](https://www.openstreetmap.org/) and search for the location you want to create a map for.
@@ -122,7 +125,7 @@ This step converts your `.osm` file into:
 
 ### Step 4: Create Lanelet2 Map
 
-[Demonstration Video](https://drive.google.com/file/d/1GsgT-V2fWnFuPw8rWdohsYPsOSAnr716/view?usp=drive_link)
+[Demonstration](https://drive.google.com/file/d/1GsgT-V2fWnFuPw8rWdohsYPsOSAnr716/view?usp=drive_link)
 
 #### Tools Required
 - [Vector Map Builder](https://tools.tier4.jp/vector_map_builder_ll2/)
