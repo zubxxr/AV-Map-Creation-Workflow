@@ -10,7 +10,11 @@ This repository supports the paper:
 > **GEOProcessing 2025** — Awarded **Best Paper**  
 > [Read the full paper](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html)
 
-![Best Paper Award – GEOProcessing 2025](assets/best_paper_award.png)
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/8dc4020f-a378-4de7-b9d7-facc86c5a187" alt="Best Paper Award – GEOProcessing 2025" width="400"/>
+</p>
+
+
 ---
 
 ## Overview
