@@ -160,5 +160,6 @@ python3 remove_lat_lon.py map_files/new_lanelet2_maps.osm map_files/lanelet2_map
 ### For Debugging:
 - To enter the container, run:
   ```bash
+  xhost +
   docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd)/map_files/map.osm:/app/map.osm --entrypoint bash -it osm-3d-pcd-pipeline
   ```
