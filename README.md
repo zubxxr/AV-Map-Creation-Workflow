@@ -240,6 +240,18 @@ These files are now ready to be used with Autoware for simulation or real-world 
 
 ---
 
+## Troubleshooting
+
+Feel free to open an **Issue** if there are any problems.
+
+### Entering the Container
+To manually enter the container for debugging:
+```bash
+xhost +
+docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd)/map_files/map.osm:/app/map.osm --entrypoint bash -it zubxxr/osm-3d-pcd-pipeline
+```
+---
+
 ## Related Publication and References
 
 This repository is based on the paper:
@@ -254,13 +266,4 @@ Cited Tools & Techniques:
 - Vector Map Builder
 - Autoware Universe (2024.11)
 - AWSIM Labs
-
 ---
-
-## Troubleshooting
-
-To manually enter the container for debugging:
-```bash
-xhost +
-docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd)/map_files/map.osm:/app/map.osm --entrypoint bash -it zubxxr/osm-3d-pcd-pipeline
-```
