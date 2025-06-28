@@ -147,6 +147,8 @@ This tool is used to draw lanes, parking lots, and traffic markings on top of yo
 > The map may contain elements that are unwanted:
 > ![image](https://github.com/user-attachments/assets/560814b6-d5aa-4455-9d3b-e5a5fc70de82)
 > Best way to get rid of these is to use the CloudCompare GUI or some pointcloud editer tool and trim the elements out.
+> For example, using the segment tool in CloudCompare.
+> ![image](https://github.com/user-attachments/assets/95d7b391-bef2-4413-a746-3a3aeb18cb72)
 > However, this is not necessary for functionality.
 
 2. Go to **Create > Create Lanelet2Maps > Change Map Projector Info**, and set the projector type to **MGRS**.
