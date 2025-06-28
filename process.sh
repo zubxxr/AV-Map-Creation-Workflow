@@ -53,9 +53,12 @@ pcl_transform_point_cloud $PCD_FILE $FIRST_TRANSFORM -axisangle 1,0,0,-1.5708
 echo "Applying second transformation..."
 pcl_transform_point_cloud $FIRST_TRANSFORM $SECOND_TRANSFORM -axisangle 1,0,0,3.1416
 
+# Downsample to make lighter on system
+pcl_voxel_grid $SECOND_TRANSFORM $FINAL_PCD -leaf 0.1,0.1,0.1
+
 # Convert to binary PCD
 echo "Converting to binary PCD format..."
-pcl_convert_pcd_ascii_binary $SECOND_TRANSFORM $FINAL_PCD 1
+pcl_convert_pcd_ascii_binary $FINAL_PCD $FINAL_PCD 1
 
 # Cleanup: Remove intermediate PCD files
 echo "Cleaning up intermediate files..."
