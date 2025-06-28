@@ -144,6 +144,10 @@ This tool is used to draw lanes, parking lots, and traffic markings on top of yo
    - Go to **File > Import PCD > Browse**, select the point cloud from Step 3, and click **Import**.
    - You should now see the point cloud in the editor.
    ![image](https://github.com/user-attachments/assets/3cf18bc9-0763-4ae2-8310-2b37a0e09c35)
+> The map may contain elements that are unwanted:
+> ![image](https://github.com/user-attachments/assets/560814b6-d5aa-4455-9d3b-e5a5fc70de82)
+> Best way to get rid of these is to use the CloudCompare GUI or some pointcloud editer tool and trim the elements out.
+> However, this is not necessary for functionality.
 
 2. Go to **Create > Create Lanelet2Maps > Change Map Projector Info**, and set the projector type to **MGRS**.
    ![image](https://github.com/user-attachments/assets/729e6e9a-9230-4633-8315-48a485ce6f42)
