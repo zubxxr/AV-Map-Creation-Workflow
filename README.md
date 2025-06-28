@@ -247,7 +247,7 @@ These files are now ready to be used with Autoware for simulation or real-world 
 - **Large OSM maps are not supported:**  
   This workflow was designed and tested with relatively small OpenStreetMap (OSM) files. It does not currently scale well to large maps due to memory and processing constraints in the conversion and map-building stages. Attempting to process large `.osm` files may result in performance degradation or failure.
 
-> 📌 _Limitation identified in June 2025._
+> 📌 _Limitation identified in July 2025._
 
 
 ## Troubleshooting
