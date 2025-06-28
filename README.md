@@ -52,6 +52,7 @@ To address this:
 1. [Complete Workflow: Step-by-Step Guide](#complete-workflow-step-by-step-guide)
 2. [Workflow Success Demonstration](#workflow-success-demonstration)
 3. [Related Publication and References](#related-publication-and-references)
+4. [Limitations](#limitations)
 
 ---
 
@@ -239,6 +240,15 @@ These files are now ready to be used with Autoware for simulation or real-world 
 ![image](https://github.com/user-attachments/assets/f3e45604-2fe0-4f5b-9f1a-c98c1c2fa583)
 
 ---
+
+
+## Limitations
+
+- **Large OSM maps are not supported:**  
+  This workflow was designed and tested with relatively small OpenStreetMap (OSM) files. It does not currently scale well to large maps due to memory and processing constraints in the conversion and map-building stages. Attempting to process large `.osm` files may result in performance degradation or failure.
+
+> 📌 _Limitation identified in June 2025._
+
 
 ## Troubleshooting
 
