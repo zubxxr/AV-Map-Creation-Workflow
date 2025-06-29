@@ -131,7 +131,8 @@ This step converts your `.osm` file into:
    sudo chown -R $USER:$USER ~/AV-Map-Creation-Workflow/map_files/3D_Model
    ```
 > Trim OBJ file
-> ![image](https://github.com/user-attachments/assets/b9be79e0-52f2-403e-8b88-2a5eae67db36)
+> ![image](https://github.com/user-attachments/assets/b3e3d646-94dc-447d-96ed-515ec8e7edb4)
+
 > To this:
 > ![image](https://github.com/user-attachments/assets/9616b971-af04-4461-8eb4-871f16bb9b03)
 
