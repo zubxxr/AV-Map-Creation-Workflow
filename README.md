@@ -224,6 +224,7 @@ These files are now ready to be used with Autoware for simulation or real-world 
 ![Importing Files into Autoware](https://github.com/user-attachments/assets/760fefa1-7668-4c97-9531-42e42b6a50a9)
 
 
+
 ### Step 7: Import to AWSIM
 - Import `.obj`, `.mtl`, and `.png` files into Unity scene
 - Enable Mesh Colliders and Read/Write in inspector
@@ -231,7 +232,7 @@ These files are now ready to be used with Autoware for simulation or real-world 
 
 #### Example: Lanelet2 Map and 3D Model Imported into AWSIM
 ![image](https://github.com/user-attachments/assets/d19eff33-39b4-48cd-9992-01c18400a827)
-
+> Parking lot and vehicles were added in manually.
 ---
 
 ## Workflow Success Demonstration
