@@ -227,6 +227,11 @@ These files are now ready to be used with Autoware for simulation or real-world 
 
 ### Step 7: Import to AWSIM
 - Import `.obj`, `.mtl`, and `.png` files into Unity scene
+- Drag them in:
+- ![image](https://github.com/user-attachments/assets/a0dcbb49-7f8d-4c2b-a5b3-bfdb1f031c3a)
+- Drag the obj file into the scene and enable read/write
+- ![image](https://github.com/user-attachments/assets/46f84474-9e31-475b-bb61-bb28106550cf)
+
 - Enable Mesh Colliders and Read/Write in inspector
 - Load and align the Lanelet2 file to synchronize with Autoware
 
