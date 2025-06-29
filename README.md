@@ -239,7 +239,14 @@ These files are now ready to be used with Autoware for simulation or real-world 
 - ![image](https://github.com/user-attachments/assets/46f84474-9e31-475b-bb61-bb28106550cf)
 
 - Enable Mesh Colliders and Read/Write in inspector
-- Load and align the Lanelet2 file to synchronize with Autoware
+
+- ![image](https://github.com/user-attachments/assets/5e720c2d-ccd7-4e31-9566-f55890d7f2d9)
+- ![image](https://github.com/user-attachments/assets/7994c316-d0a3-4ad4-8581-a98e4e4ca2fd)
+- ![image](https://github.com/user-attachments/assets/6995bcf8-c6ab-4349-9418-e12418cddf99)
+- ![Uploading image.png…]()
+
+
+- Load and align the Lanelet2 file to synchronize with Autoware. [Instructions](https://autowarefoundation.github.io/AWSIM-Labs/main/Components/Environment/LaneletBoundsVisualizer/)
 
 #### Example: Lanelet2 Map and 3D Model Imported into AWSIM
 ![image](https://github.com/user-attachments/assets/d19eff33-39b4-48cd-9992-01c18400a827)
