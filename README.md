@@ -130,6 +130,11 @@ This step converts your `.osm` file into:
    ```bash
    sudo chown -R $USER:$USER ~/AV-Map-Creation-Workflow/map_files/3D_Model
    ```
+> Trim OBJ file
+> ![image](https://github.com/user-attachments/assets/b9be79e0-52f2-403e-8b88-2a5eae67db36)
+> To this:
+> ![image](https://github.com/user-attachments/assets/9616b971-af04-4461-8eb4-871f16bb9b03)
+
 
 ### Step 4: Create Lanelet2 Map
 
