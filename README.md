@@ -194,6 +194,10 @@ This tool is used to draw lanes, parking lots, and traffic markings on top of yo
 #### Example map
 ![image](https://github.com/user-attachments/assets/a9c2e77c-0f3f-47fd-8a03-29f0ed805781)
 
+
+> Make sure lanelet2 is good by opening new tab, loading it in, and seeing if its good.
+> Also run planning sim on it to make sure its all drivable in all directions
+
 9. Export the Lanelet2 map:
    - Go to **File > Export Lanelet2Maps**
    - Press **OK** on the popup
