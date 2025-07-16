@@ -5,8 +5,6 @@ OSM_FILE="/app/map.osm"
 OBJ_FILE="/app/3D_Model/output.obj"
 PCD_FILE="/app/output.pcd"
 MTL_FILE="/app/3D_Model/output.obj.mtl"
-FIRST_TRANSFORM="/app/first_transformation.pcd"
-SECOND_TRANSFORM="/app/transformed_top_down_view.pcd"
 FINAL_PCD="/app/pointcloud_map.pcd"
 
 mkdir -p /app/3D_Model
@@ -46,22 +44,22 @@ echo "Sampled PCD File created successfully!"
 # Ensure the output file is moved to the correct location
 mv /app/3D_Model/output_SAMPLED_*.pcd $PCD_FILE
 
+# Downsample to make pcd lighter on system
+pcl_voxel_grid $PCD_FILE $PCD_FILE -leaf 0.1,0.1,0.1
+
 # Apply transformations
 echo "Applying first transformation..."
-pcl_transform_point_cloud $PCD_FILE $FIRST_TRANSFORM -axisangle 1,0,0,-1.5708
+pcl_transform_point_cloud $PCD_FILE $PCD_FILE -axisangle 1,0,0,-1.5708
 
 echo "Applying second transformation..."
-pcl_transform_point_cloud $FIRST_TRANSFORM $SECOND_TRANSFORM -axisangle 1,0,0,3.1416
-
-# Downsample to make lighter on system
-pcl_voxel_grid $SECOND_TRANSFORM $FINAL_PCD -leaf 0.1,0.1,0.1
+pcl_transform_point_cloud $PCD_FILE $PCD_FILE -axisangle 1,0,0,3.1416
 
 # Convert to binary PCD
 echo "Converting to binary PCD format..."
-pcl_convert_pcd_ascii_binary $FINAL_PCD $FINAL_PCD 1
+pcl_convert_pcd_ascii_binary $PCD_FILE $FINAL_PCD 1
 
-# Cleanup: Remove intermediate PCD files
-echo "Cleaning up intermediate files..."
-rm -f $PCD_FILE $FIRST_TRANSFORM $SECOND_TRANSFORM
+# Cleanup: Remove old PCD file
+echo "Removing old PCD file..."
+rm -f $PCD_FILE
 
 echo "Process completed successfully!"
