@@ -1,8 +1,5 @@
 # AV Map Creation Workflow for Autonomous Vehicle Simulations
 
-
-## PROBUILDER IN UNITY
-
 ![Best Paper Award - GEOProcessing 2025](https://img.shields.io/badge/Best%20Paper-GEOProcessing%202025-brightgreen?style=flat-square)
 
 ## Publication and Recognition
@@ -16,8 +13,6 @@ This repository supports the paper:
 <p align="left">
   <img src="https://github.com/user-attachments/assets/8dc4020f-a378-4de7-b9d7-facc86c5a187" alt="Best Paper Award – GEOProcessing 2025" width="400"/>
 </p>
-
-
 ---
 
 ## Overview
@@ -55,7 +50,8 @@ To address this:
 1. [Complete Workflow: Step-by-Step Guide](#complete-workflow-step-by-step-guide)
 2. [Workflow Success Demonstration](#workflow-success-demonstration)
 3. [Related Publication and References](#related-publication-and-references)
-4. [Limitations](#limitations)
+4. [Localization Instability](#localization-instability)
+5. [Limitations](#limitations)
 
 ---
 
@@ -133,19 +129,13 @@ This step converts your `.osm` file into:
    ```bash
    sudo chown -R $USER:$USER ~/AV-Map-Creation-Workflow/map_files/3D_Model
    ```
-> Trim OBJ file
-> ![image](https://github.com/user-attachments/assets/b3e3d646-94dc-447d-96ed-515ec8e7edb4)
-
-> To this:
-> ![image](https://github.com/user-attachments/assets/9616b971-af04-4461-8eb4-871f16bb9b03)
-
 
 ### Step 4: Create Lanelet2 Map
 
 [Demonstration](https://drive.google.com/file/d/1GsgT-V2fWnFuPw8rWdohsYPsOSAnr716/view?usp=drive_link)
 
 #### Tools Required
-- [Vector Map Builder](https://tools.tier4.jp/vector_map_builder_ll2/)
+- [Vector Map Builder (VMB)](https://tools.tier4.jp/vector_map_builder_ll2/)
 
 This tool is used to draw lanes, parking lots, and traffic markings on top of your point cloud.
 
@@ -153,12 +143,6 @@ This tool is used to draw lanes, parking lots, and traffic markings on top of yo
    - Go to **File > Import PCD > Browse**, select the point cloud from Step 3, and click **Import**.
    - You should now see the point cloud in the editor.
    ![image](https://github.com/user-attachments/assets/3cf18bc9-0763-4ae2-8310-2b37a0e09c35)
-> The map may contain elements that are unwanted:
-> ![image](https://github.com/user-attachments/assets/560814b6-d5aa-4455-9d3b-e5a5fc70de82)
-> Best way to get rid of these is to use the CloudCompare GUI or some pointcloud editer tool and trim the elements out.
-> For example, using the segment tool in CloudCompare.
-> ![image](https://github.com/user-attachments/assets/49437e6a-feda-4166-9e68-df44f83ef7e1)
-> However, this is not necessary for functionality.
 
 2. Go to **Create > Create Lanelet2Maps > Change Map Projector Info**, and set the projector type to **MGRS**.
    ![image](https://github.com/user-attachments/assets/729e6e9a-9230-4633-8315-48a485ce6f42)
@@ -195,8 +179,8 @@ This tool is used to draw lanes, parking lots, and traffic markings on top of yo
 ![image](https://github.com/user-attachments/assets/a9c2e77c-0f3f-47fd-8a03-29f0ed805781)
 
 
-> Make sure lanelet2 is good by opening new tab, loading it in, and seeing if its good.
-> Also run planning sim on it to make sure its all drivable in all directions
+> Make sure the lanelet2 map is good by exporting it, reimporting it into VMB again, and making sure all the lanelets are correct and not broken. This can happen due to a bug.
+> Next, load the map into Autoware PSIM and make sure all areas of the map are routable. 
 
 9. Export the Lanelet2 map:
    - Go to **File > Export Lanelet2Maps**
@@ -237,20 +221,16 @@ These files are now ready to be used with Autoware for simulation or real-world 
 ![Importing Files into Autoware](https://github.com/user-attachments/assets/760fefa1-7668-4c97-9531-42e42b6a50a9)
 
 
-
 ### Step 7: Import to AWSIM
-- Import `.obj`, `.mtl`, and `.png` files into Unity scene
-- Drag them in:
-- ![image](https://github.com/user-attachments/assets/a0dcbb49-7f8d-4c2b-a5b3-bfdb1f031c3a)
-- Drag the obj file into the scene and enable read/write
-- ![image](https://github.com/user-attachments/assets/46f84474-9e31-475b-bb61-bb28106550cf)
-
-- Enable Mesh Colliders and Read/Write in inspector
+- Import `.obj`, `.mtl`, and `.png` files into Unity scene by dragging them in from the system file manager into the Assets window
+![image](https://github.com/user-attachments/assets/a0dcbb49-7f8d-4c2b-a5b3-bfdb1f031c3a)
+- Drag the obj file into the scene and enable read/write permissions on the file
+![image](https://github.com/user-attachments/assets/46f84474-9e31-475b-bb61-bb28106550cf)
 
 - ![image](https://github.com/user-attachments/assets/5e720c2d-ccd7-4e31-9566-f55890d7f2d9)
 - ![image](https://github.com/user-attachments/assets/7994c316-d0a3-4ad4-8581-a98e4e4ca2fd)
 - ![image](https://github.com/user-attachments/assets/6995bcf8-c6ab-4349-9418-e12418cddf99)
-- ![Uploading image.png…]()
+- <img width="1600" height="766" alt="image" src="https://github.com/user-attachments/assets/22a0ead2-eda0-4980-89d4-9949e285b2b3" />
 
 
 - Load and align the Lanelet2 file to synchronize with Autoware. [Instructions](https://autowarefoundation.github.io/AWSIM-Labs/main/Components/Environment/LaneletBoundsVisualizer/)
@@ -272,6 +252,25 @@ These files are now ready to be used with Autoware for simulation or real-world 
 ![image](https://github.com/user-attachments/assets/f3e45604-2fe0-4f5b-9f1a-c98c1c2fa583)
 
 ---
+
+## Localization Instability
+
+In the case of localization instability, the map may need additional features to help localize. This can be done using a 3D mesh editing tool, such as Blender in this case. 
+
+The 3D mesh was loaded in to Blender after the workflow was used and trimmed to remove the unwanted features.
+
+### Raw 3D Mesh
+![image](https://github.com/user-attachments/assets/b3e3d646-94dc-447d-96ed-515ec8e7edb4)
+
+### Trimmed 3D Mesh
+![image](https://github.com/user-attachments/assets/9616b971-af04-4461-8eb4-871f16bb9b03)
+
+Next, planar, wall-like structures were then added around the perimeter of the map to provide additional geometry for LiDAR scan matching.
+
+### Added Perimeter Walls to Enhance LiDAR Scan Matching
+<img width="1600" height="766" alt="image" src="https://github.com/user-attachments/assets/1e7680d8-c793-4f7a-93c5-c977cf50ab84" />
+
+The 3D mesh can then be exported again, and re-imported into the workflow to generate the PCD file required by Autoware. This simple yet effective adjustment significantly improved localization performance in previously sparse regions of the map.
 
 
 ## Limitations
@@ -309,3 +308,7 @@ Cited Tools & Techniques:
 - Autoware Universe (2024.11)
 - AWSIM Labs
 ---
+
+
+
+
