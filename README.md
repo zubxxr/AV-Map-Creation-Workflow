@@ -227,11 +227,6 @@ These files are now ready to be used with Autoware for simulation or real-world 
 - Drag the obj file into the scene and enable read/write permissions on the file
 ![image](https://github.com/user-attachments/assets/46f84474-9e31-475b-bb61-bb28106550cf)
 
-- ![image](https://github.com/user-attachments/assets/5e720c2d-ccd7-4e31-9566-f55890d7f2d9)
-- ![image](https://github.com/user-attachments/assets/7994c316-d0a3-4ad4-8581-a98e4e4ca2fd)
-- ![image](https://github.com/user-attachments/assets/6995bcf8-c6ab-4349-9418-e12418cddf99)
-- <img width="1600" height="766" alt="image" src="https://github.com/user-attachments/assets/22a0ead2-eda0-4980-89d4-9949e285b2b3" />
-
 
 - Load and align the Lanelet2 file to synchronize with Autoware. [Instructions](https://autowarefoundation.github.io/AWSIM-Labs/main/Components/Environment/LaneletBoundsVisualizer/)
 
