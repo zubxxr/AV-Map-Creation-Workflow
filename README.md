@@ -187,9 +187,9 @@ This tool is used to draw lanes, parking lots, and traffic markings on top of yo
    - Press **OK** on the popup
    - Click **Download**
 
-10. Move the exported `.osm` file into your project directory:
+10. Copy the exported `.osm` file into your project directory:
    ```bash
-   mv ~/Downloads/new_lanelet2_maps.osm ~/AV-Map-Creation-Workflow/map_files/
+   cp ~/Downloads/new_lanelet2_maps.osm ~/AV-Map-Creation-Workflow/map_files/
    ```
 
 ### Step 5: Nullify Latitude/Longitude
