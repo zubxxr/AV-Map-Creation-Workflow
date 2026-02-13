@@ -1,20 +1,5 @@
 # AV Map Creation Workflow for Autonomous Vehicle Simulations
 
-![Best Paper Award - GEOProcessing 2025](https://img.shields.io/badge/Best%20Paper-GEOProcessing%202025-brightgreen?style=flat-square)
-
-## Publication and Recognition
-
-This repository supports the paper:
-> **Zubair Islam**, Ahmaad Ansari, George Daoud, Mohamed El-Darieby  
-> *A Workflow for Map Creation in Autonomous Vehicle Simulations*  
-> **GEOProcessing 2025** — Awarded **Best Paper**  
-> [Read the full paper](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html)
-
-<p align="left">
-  <img src="https://github.com/user-attachments/assets/8dc4020f-a378-4de7-b9d7-facc86c5a187" alt="Best Paper Award – GEOProcessing 2025" width="400"/>
-</p>
----
-
 ## Overview
 
 This repository outlines a simulator-agnostic workflow to create maps for Autonomous Vehicle (AV) simulation testing. It enables the generation of:
@@ -49,9 +34,8 @@ To address this:
 ## Table of Contents
 1. [Complete Workflow: Step-by-Step Guide](#complete-workflow-step-by-step-guide)
 2. [Workflow Success Demonstration](#workflow-success-demonstration)
-3. [Related Publication and References](#related-publication-and-references)
-4. [Localization Instability](#localization-instability)
-5. [Limitations](#limitations)
+3. [Localization Instability](#localization-instability)
+4. [Limitations](#limitations)
 
 ---
 
@@ -288,21 +272,19 @@ docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd)/map_fi
 ```
 ---
 
-## Related Publication and References
 
-This repository is based on the paper:
-- **Zubair Islam**, Ahmaad Ansari, George Daoud, Mohamed El-Darieby  
-  *"A Workflow for Map Creation in Autonomous Vehicle Simulations"*, GEOProcessing 2025  
-  [Read Paper](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html)
+## Publication and Recognition
 
-Cited Tools & Techniques:
-- OSM2World
-- CloudCompare
-- Point Cloud Library (PCL)
-- Vector Map Builder
-- Autoware Universe (2024.11)
-- AWSIM Labs
----
+This repository supports the paper:
+> **Zubair Islam**, Ahmaad Ansari, George Daoud, Mohamed El-Darieby  
+> *A Workflow for Map Creation in Autonomous Vehicle Simulations*  
+> **GEOProcessing 2025** — Awarded **Best Paper**  
+> [Read the full paper](https://www.thinkmind.org/library/GEOProcessing/GEOProcessing_2025/geoprocessing_2025_2_40_30041.html)
+
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/8dc4020f-a378-4de7-b9d7-facc86c5a187" alt="Best Paper Award – GEOProcessing 2025" width="400"/>
+</p>
+
 
 
 
