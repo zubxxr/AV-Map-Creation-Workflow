@@ -1,7 +1,5 @@
 # AV Map Creation Workflow for Autonomous Vehicle Simulations
 
-## Overview
-
 This repository outlines a simulator-agnostic workflow to create maps for Autonomous Vehicle (AV) simulation testing. It enables the generation of:
 
 - **3D Mesh Models**
@@ -11,6 +9,29 @@ This repository outlines a simulator-agnostic workflow to create maps for Autono
 These outputs are compatible with **Autoware** and **AWSIM**, facilitating both virtual AV testing and future real-world deployment. The workflow was designed to address the lack of easily reproducible, parking-lot-sized maps for AVP (Autonomous Valet Parking) research.
 
 Demonstrations have been provided below for each part. This [Google Drive](https://drive.google.com/drive/folders/1Mtkr13VCS5KdGLns7JRVTOxwJmy0Xnit?usp=drive_link) also contains all the demonstrations.
+
+---
+
+
+## Table of Contents
+
+- [Motivation](#motivation)
+- [Architecture](#architecture)
+- [Setup](#setup)
+  - [Step 1: Clone the Repository and Set Up the Project Structure](#step-1-clone-the-repository-and-set-up-the-project-structure)
+  - [Step 2: Download the OSM File](#step-2-download-the-osm-file)
+  - [Step 3: Generate OBJ Files and PCD Files](#step-3-generate-obj-files-and-pcd-files)
+  - [Step 4: Create Lanelet2 Map](#step-4-create-lanelet2-map)
+  - [Step 5: Nullify Latitude/Longitude](#step-5-nullify-latitudelongitude)
+  - [Step 6: Import Files to Autoware](#step-6-import-files-to-autoware)
+  - [Step 7: Import to AWSIM](#step-7-import-to-awsim)
+- [Results](#results)
+- [Localization Instability](#localization-instability)
+- [Limitations](#limitations)
+- [Troubleshooting](#troubleshooting)
+- [Publication and Recognition](#publication-and-recognition)
+
+---
 
 ## Motivation
 
@@ -22,24 +43,11 @@ To address this:
 - Used **open-source, low-resource tools** to make the pipeline accessible.
 
 ## Architecture
-
-### Full Workflow Diagram
-![image](https://github.com/user-attachments/assets/975b8182-9a63-4b15-b198-fe80a1c99708)
-
-### Automated Mapping via Docker
-![image](https://github.com/user-attachments/assets/eff78a19-81f3-4990-9137-efca93cb049d)
+<img width="1193" height="466" alt="image" src="https://github.com/user-attachments/assets/bcb7f795-1a03-4ee7-ae2c-b146f9da0849" />
 
 ---
 
-## Table of Contents
-1. [Complete Workflow: Step-by-Step Guide](#complete-workflow-step-by-step-guide)
-2. [Workflow Success Demonstration](#workflow-success-demonstration)
-3. [Localization Instability](#localization-instability)
-4. [Limitations](#limitations)
-
----
-
-## Complete Workflow: Step-by-Step Guide
+## Setup
 Each step is supported with visuals and references to the paper and demo videos.
 
 ### Step 1: Clone the Repository and Set Up the Project Structure
@@ -219,7 +227,7 @@ These files are now ready to be used with Autoware for simulation or real-world 
 > Parking lot and vehicles were added in manually.
 ---
 
-## Workflow Success Demonstration
+## Results
 
 ### Initialization in AWSIM and Autoware
 ![image](https://github.com/user-attachments/assets/0b7c5f4f-debe-4848-be7e-f8919a99c18b)
